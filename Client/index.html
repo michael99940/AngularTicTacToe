@@ -13,8 +13,8 @@
   <body>
     <div class="container" ng-controller="ticTacToeController">
         <div class="app">
-            <h1 class="title">TicTacToe</h1>
-            <div class="message">{{ showPlayer(player) }}</div>
+            <h1>TicTacToe</h1>
+            <div>{{ showPlayer(player) }}</div>
             <div ng-repeat="(i, row) in board" class='board'>
               <button class='entry' 
                 ng-class="entryClass[i][j]" 
