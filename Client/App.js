@@ -7,8 +7,8 @@ ticTacToeApp.controller('ticTacToeController', function ($scope) {
   $scope.win = false;
   $scope.tie = false;
   $scope.message = ' ';
-  $scope.resetClass = 'no-highLight';
-  $scope.entryClass = [['no-highLight','no-highLight','no-highLight'],['no-highLight','no-highLight','no-highLight'],['no-highLight','no-highLight','no-highLight']];
+  $scope.resetClass = '';
+  $scope.entryClass = [['','',''],['','',''],['','','']];
 
   $scope.reset = function() {
     for (let i = 0; i < $scope.board.length; i++) {
@@ -21,8 +21,8 @@ ticTacToeApp.controller('ticTacToeController', function ($scope) {
     $scope.winner = null;
     $scope.tie = false;
     $scope.message = ' ';
-    $scope.resetClass = 'no-highLight';
-    $scope.entryClass = [['no-highLight','no-highLight','no-highLight'],['no-highLight','no-highLight','no-highLight'],['no-highLight','no-highLight','no-highLight']];
+    $scope.resetClass = '';
+    $scope.entryClass = [['','',''],['','',''],['','','']];
   }
 
   $scope.showPlayer = function() {
@@ -37,10 +37,10 @@ ticTacToeApp.controller('ticTacToeController', function ($scope) {
 
   $scope.filled = function(entry,i,j) {
     if($scope.winner || $scope.tie) {
-      $scope.entryClass[i][j] = 'no-highLight';
+      $scope.entryClass[i][j] = '';
       return true;
     } else if (entry.value !== '-') {
-      $scope.entryClass[i][j] = 'no-highLight';
+      $scope.entryClass[i][j] = '';
       return true;
     } else {
       return false;
@@ -105,7 +105,7 @@ ticTacToeApp.controller('ticTacToeController', function ($scope) {
   }
 
   $scope.offEvent = function () {
-    $scope.resetClass = 'no-highLight';
+    $scope.resetClass = '';
   }
   
   $scope.onEntryEvent = function(i,j) {
@@ -113,6 +113,6 @@ ticTacToeApp.controller('ticTacToeController', function ($scope) {
   }
 
   $scope.offEntryEvent = function(i,j) {
-    $scope.entryClass[i][j] = 'no-highLight';
+    $scope.entryClass[i][j] = '';
   }
 });

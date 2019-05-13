@@ -7,6 +7,7 @@ body {
 
 .app {
     text-align: center;
+    color: white;
     height: 320px;
     width: 300px;
     background-color: rgb(41, 39, 39);
@@ -19,12 +20,6 @@ body {
     width:50px;
     border: solid rgb(41, 39, 39);
 }
-.message {
-
-}
-.title {
-
-}
 #reset {
     margin-top:50px;
     border: none;
@@ -35,8 +30,4 @@ body {
 }
 .highLight {
     opacity:0.5;
-}
-
-.no-highLight {
-    
 }
