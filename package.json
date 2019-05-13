@@ -1,0 +1,19 @@
+{
+  "name": "angulartictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server ./Client -a localhost -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
